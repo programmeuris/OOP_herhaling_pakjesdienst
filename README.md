@@ -1,6 +1,5 @@
 # OOP_herhaling_pakjesdienst
 
-De gekregen startbestanden stonden nog in .NET Framework 4.something
-Dit is een versie in .NET Core 3.1 zoals de rest van de cursus.
+So this kind of turned in to a reference rather than a starter project
 
-De branch "startbestanden" bevat een gelijkaardig startproject in Core 3.1
+starter project is still available in the [startbestanden branch](https://github.com/programmeuris/OOP_herhaling_pakjesdienst/tree/startbestanden).
