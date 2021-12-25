@@ -5,6 +5,9 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <!--These set certain values for certain properties for ANY control of that type
+                so you don't have to set an individual margin or w/e for every button and their mom
+                more info: https://docs.microsoft.com/en-us/dotnet/desktop/wpf/controls/styles-templates-overview?view=netdesktop-6.0 -->
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="5" />
                 <Setter Property="HorizontalContentAlignment" Value="Center" />

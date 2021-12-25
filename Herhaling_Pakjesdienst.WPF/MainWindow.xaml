@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Pakjesdienst" Height="450" Width="800">
     <Grid ShowGridLines="False">
+        <!-- Some properties are set in App.xaml instead of here, more info over there-->
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -45,10 +47,12 @@
                   Grid.Row="0"
                   Grid.Column="1">
             <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="rdbTwoDay"
-                             Content="Two Day"/>
+                <RadioButton x:Name="rdbTwoday"
+                             Content="Two Day"
+                             Click="SoortVerzending_Click"/>
                 <RadioButton x:Name="rdbOvernight"
-                             Content="Overnight"/>
+                             Content="Overnight"
+                             Click="SoortVerzending_Click"/>
             </StackPanel>
         </GroupBox>
 
@@ -90,7 +94,8 @@
                 </DockPanel>
                 <DockPanel>
                     <Label Content="Soort Zending"
-                           DockPanel.Dock="Left"/>
+                           DockPanel.Dock="Left"
+                           x:Name="lblSoortZending"/>
                     <TextBox x:Name="txtSoortZending"
                              DockPanel.Dock="Right"/>
                 </DockPanel>
