@@ -6,7 +6,9 @@ namespace Herhaling_Pakjesdienst.Models
 {
     public class TwodayPackage : Package
     {
-        // constructors
+        // most advanced stuff we didn't see yet has comments and links in Package.cs
+
+        //=constructors============================================================================
         public TwodayPackage(string naamVerzender,
                              string adresVerzender,
                              string naamBestemming,
@@ -23,14 +25,15 @@ namespace Herhaling_Pakjesdienst.Models
             VasteKost = vasteKost;
         }
 
+        // constructor chaining
         public TwodayPackage() : this("", "", "", "", 0, 0, 0) { }
 
-        //public methods
+        //=public=methods==========================================================================
         public override string BerekenVerzendingsKosten() => $"{Gewicht} x {PrijsPerKg} + {VasteKost} = {VerzendingsKosten():c2}";
         public override double VerzendingsKosten() => Math.Round(Gewicht * PrijsPerKg + VasteKost, 2);
 
 
-        // public properties
+        //=public=properties=======================================================================
         public double VasteKost
         {
             get { return _vasteKost; }
@@ -41,11 +44,9 @@ namespace Herhaling_Pakjesdienst.Models
                 else
                     _vasteKost = Math.Round(value, 2);
             }
-
-
         }
 
-        // private variables
+        //=private=variables=======================================================================
         private double _vasteKost;
     }
 }

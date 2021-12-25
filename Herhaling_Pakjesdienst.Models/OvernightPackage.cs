@@ -6,7 +6,9 @@ namespace Herhaling_Pakjesdienst.Models
 {
     public class OvernightPackage : Package
     {
-        // constructors
+        // most advanced stuff we didn't see yet has info and links in Package.cs
+
+        //=constructors============================================================================
         public OvernightPackage(string naamVerzender,
                                 string adresVerzender,
                                 string naamBestemming,
@@ -23,13 +25,14 @@ namespace Herhaling_Pakjesdienst.Models
             ToeslagPerKg = toeslag;
         }
 
+        // constructor chaining
         public OvernightPackage() : this("", "", "", "", 0, 0, 0) { }
 
-        // public methods
+        //=public=methods==========================================================================
         public override string BerekenVerzendingsKosten() => $"( {ToeslagPerKg} + {PrijsPerKg} ) x {Gewicht} = {VerzendingsKosten():c2}";
         public override double VerzendingsKosten() => Math.Round((PrijsPerKg + ToeslagPerKg) * Gewicht, 2);
 
-        // public properties
+        //=public=properties=======================================================================
         public double ToeslagPerKg
         {
             get { return _toeslagPerKg; }
@@ -42,7 +45,7 @@ namespace Herhaling_Pakjesdienst.Models
             }
         }
 
-        // private variables
+        //=private=variables=======================================================================
         private double _toeslagPerKg;
     }
 }
