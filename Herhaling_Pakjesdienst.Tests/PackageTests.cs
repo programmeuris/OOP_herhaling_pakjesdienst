@@ -61,10 +61,18 @@ namespace Herhaling_Pakjesdienst.Tests
             Assert.AreEqual(expectedOutput, package.ToString());
         }
 
-        //[Test]
+        [Test]
+        public void Gewicht_Rounds_To_2_Decimal_Places()
+        {
+            Package package = new TwodayPackage("", "", "", "", 69.423, 0, 0);
+
+            Assert.AreEqual("69.42", package.Gewicht.ToString());
+        }
+
         // there's no good way to test the base class BerekenVerzendingsKosten as the only available
         // constructor in Package.cs is protected
-        // can only test the derived types
+        // can only test the derived types, but leaving it commented for clarity
+        //[Test]
         //public void BerekenVerzendingsKosten_Returns_Valid_Output()
         //{
         //    Package package = new TwodayPackage("", "", "", "", 10, 5, 0);
@@ -73,13 +81,5 @@ namespace Herhaling_Pakjesdienst.Tests
 
         //    Assert.AreEqual(expectedOutput, package.BerekenVerzendingsKosten());
         //}
-
-        [Test]
-        public void Gewicht_Rounds_To_2_Decimal_Places()
-        {
-            Package package = new TwodayPackage("", "", "", "", 69.423, 0, 0);
-
-            Assert.AreEqual("69.42", package.Gewicht.ToString());
-        }
     }
 }
