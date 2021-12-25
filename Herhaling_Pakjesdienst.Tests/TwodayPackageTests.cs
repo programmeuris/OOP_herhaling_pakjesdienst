@@ -5,7 +5,7 @@ using System;
 namespace Herhaling_Pakjesdienst.Tests
 {
     [TestFixture]
-    [SetCulture("en-US")]
+    [SetCulture("en-US")] // all tests run on the same culture
     public class TwodayPackageTests
     {
         [Test]

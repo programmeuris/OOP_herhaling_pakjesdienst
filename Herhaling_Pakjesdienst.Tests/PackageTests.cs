@@ -5,7 +5,7 @@ using System;
 namespace Herhaling_Pakjesdienst.Tests
 {
     [TestFixture]
-    [SetCulture("en-US")]
+    [SetCulture("en-US")] // all tests run on the same culture
     public class PackageTests
     {
         // cannot create a base package since its only constructor is protected
