@@ -7,11 +7,6 @@ namespace Herhaling_Pakjesdienst.Models
     public class TwodayPackage : Package
     {
         // constructors
-        public TwodayPackage() : this("", "", "", "", 0, 0, 0)
-        {
-
-        }
-
         public TwodayPackage(string naamVerzender,
                              string adresVerzender,
                              string naamBestemming,
@@ -28,9 +23,11 @@ namespace Herhaling_Pakjesdienst.Models
             VasteKost = vasteKost;
         }
 
+        public TwodayPackage() : this("", "", "", "", 0, 0, 0) { }
+
         //public methods
         public override string BerekenVerzendingsKosten() => $"{Gewicht} x {PrijsPerKg} + {VasteKost} = {VerzendingsKosten():c2}";
-        public override double VerzendingsKosten() => Gewicht * PrijsPerKg + VasteKost;
+        public override double VerzendingsKosten() => Math.Round(Gewicht * PrijsPerKg + VasteKost, 2);
 
 
         // public properties
@@ -48,7 +45,7 @@ namespace Herhaling_Pakjesdienst.Models
 
         }
 
-        // private vars
+        // private variables
         private double _vasteKost;
     }
 }

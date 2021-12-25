@@ -50,7 +50,7 @@ namespace Herhaling_Pakjesdienst.Models
 
         // public methods
         public virtual string BerekenVerzendingsKosten() => $"{Gewicht} x {PrijsPerKg} = {VerzendingsKosten():c2}";
-        public virtual double VerzendingsKosten() => Gewicht * PrijsPerKg;
+        public virtual double VerzendingsKosten() => Math.Round(Gewicht * PrijsPerKg, 2);
         public override string ToString() => $"Gegevens verzending\n" +
                                              $"Verzender: {VerzendNaam}, {VerzendAdres}\n" +
                                              $"Bestemmeling: {BestemmingNaam}, {BestemmingAdres}\n" +
@@ -107,7 +107,7 @@ namespace Herhaling_Pakjesdienst.Models
             set { _verzendNaam = value; }
         }
 
-        // private vars
+        // private variables
         private string _bestemmingAdres;
         private string _bestemmingNaam;
         private double _gewicht;

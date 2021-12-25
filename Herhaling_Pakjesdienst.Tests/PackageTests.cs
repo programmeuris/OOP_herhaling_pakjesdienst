@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Herhaling_Pakjesdienst.Models;
+using System;
 
 namespace Herhaling_Pakjesdienst.Tests
 {
@@ -39,7 +40,14 @@ namespace Herhaling_Pakjesdienst.Tests
         {
             Package package = new TwodayPackage("", "", "", "", weight, priceKg, 0);
 
-            Assert.AreEqual(package.VerzendingsKosten(), weight * priceKg);
+            // if the difference between the expected value and the actual value is smaller
+            // than the neccesary precision (2 digits in this case), both numbers are equal
+            Assert.IsTrue(Math.Abs(package.VerzendingsKosten() - (weight * priceKg)) < 0.001);
+
+            // result when regularly comparing both values aka magic float number shenanigans:
+            // Assert.AreEqual(weight * priceKg, package.VerzendingsKosten());
+            //      Expected: 26.759999999999998d
+            //      But was:  26.760000000000002d
         }
 
         [Test]

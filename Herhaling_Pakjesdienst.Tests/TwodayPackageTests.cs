@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Herhaling_Pakjesdienst.Models;
+using System;
 
 namespace Herhaling_Pakjesdienst.Tests
 {
@@ -24,7 +25,8 @@ namespace Herhaling_Pakjesdienst.Tests
         {
             TwodayPackage package = new TwodayPackage("", "", "", "", weight, priceKg, vasteKost);
 
-            Assert.AreEqual(weight * priceKg + vasteKost, package.VerzendingsKosten());
+            // check PackageTests.cs for explanation
+            Assert.IsTrue(Math.Abs(package.VerzendingsKosten() - (weight * priceKg + vasteKost)) < 0.001);
         }
 
         [Test]
@@ -38,9 +40,9 @@ namespace Herhaling_Pakjesdienst.Tests
         [Test]
         public void BerekenVerzendingsKosten_Returns_Valid_Output()
         {
-            Package package = new TwodayPackage("", "", "", "", 10, 5, 5);
+            TwodayPackage package = new TwodayPackage("", "", "", "", 10, 5, 6);
 
-            string expectedOutput = "10 x 5 + 5 = $55.00";
+            string expectedOutput = "10 x 5 + 6 = $56.00";
 
             Assert.AreEqual(expectedOutput, package.BerekenVerzendingsKosten());
         }
