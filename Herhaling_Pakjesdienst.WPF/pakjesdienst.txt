@@ -1,0 +1,3 @@
+﻿TwoDay;Sint Klaas;Spanjelaan 54, Antwerpen;Joske Vermeulen;Travesantlaan, Melle;10;2;5
+Overnight;Kerst Man;Kerststraat 64, Brussel;Peter Peeters;Peperstraat 1, Geel;3;2;2
+Overnight;Paas Klokken;Klokkenstraat 64, Brussel;Peter Peeters;Peperstraat 1, Geel;-3;-2;2

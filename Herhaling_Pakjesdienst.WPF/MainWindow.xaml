@@ -6,7 +6,113 @@
         xmlns:local="clr-namespace:Herhaling_Pakjesdienst.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
+        <GroupBox Header="Verzender"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  Background="GreenYellow">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <Label x:Name="lblVerzenderNaam"
+                           Content="Naam"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtVerzenderNaam"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label x:Name="lblVerzenderAdres"
+                           Content="Naam"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtVerzenderAdres"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Soort Verzending"
+                  Grid.Row="0"
+                  Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <RadioButton x:Name="rdbTwoDay"
+                             Content="Two Day"/>
+                <RadioButton x:Name="rdbOvernight"
+                             Content="Overnight"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Bestemming"
+                  Grid.Row="1"
+                  Grid.Column="0"
+                  Background="HotPink">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <Label Content="Naam"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtBestemmingNaam"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="Adres"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtBestemmingAdres"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Prijzen"
+                  Grid.Row="1"
+                  Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <DockPanel>
+                    <Label Content="Gewicht (in kg)"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtGewichtInKg"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="Prijs (per kg)"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtPrijsPerKg"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="Soort Zending"
+                           DockPanel.Dock="Left"/>
+                    <TextBox x:Name="txtSoortZending"
+                             DockPanel.Dock="Right"/>
+                </DockPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <Button x:Name="btnBereken"
+                Content="Bereken"
+                Grid.Row="2"
+                Grid.Column="0"/>
+        <Button x:Name="btnUpdate"
+                Content="Update"
+                Grid.Row="2"
+                Grid.Column="1"/>
+        <Label x:Name="lblTeBetalen"
+               Grid.Row="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               FontSize="20"/>
+        <ComboBox x:Name="cboPackages"
+                  Grid.Row="4"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

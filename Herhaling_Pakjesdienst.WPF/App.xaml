@@ -4,6 +4,30 @@
              xmlns:local="clr-namespace:Herhaling_Pakjesdienst.WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="ComboBox">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="ListBox">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="GroupBox">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
