@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Herhaling_Pakjesdienst.WPF", "Herhaling_Pakjesdienst.WPF\Herhaling_Pakjesdienst.WPF.csproj", "{DD0B1E32-C275-47A5-B3AB-BBA9F0BAF936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herhaling_Pakjesdienst.Models", "Herhaling_Pakjesdienst.Models\Herhaling_Pakjesdienst.Models.csproj", "{01D1C157-5294-45DF-8CC0-83E35C3CE120}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Herhaling_Pakjesdienst.Models", "Herhaling_Pakjesdienst.Models\Herhaling_Pakjesdienst.Models.csproj", "{01D1C157-5294-45DF-8CC0-83E35C3CE120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herhaling_Pakjesdienst.Tests", "Herhaling_Pakjesdienst.Tests\Herhaling_Pakjesdienst.Tests.csproj", "{AE64325A-F9BA-4101-BAD6-79712F4493AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Herhaling_Pakjesdienst.Tests", "Herhaling_Pakjesdienst.Tests\Herhaling_Pakjesdienst.Tests.csproj", "{AE64325A-F9BA-4101-BAD6-79712F4493AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herhaling_Pakjesdienst.DAL", "Herhaling_Pakjesdienst.DAL\Herhaling_Pakjesdienst.DAL.csproj", "{275B4AEA-9560-4108-A597-C4ACE7BBA054}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AE64325A-F9BA-4101-BAD6-79712F4493AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE64325A-F9BA-4101-BAD6-79712F4493AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE64325A-F9BA-4101-BAD6-79712F4493AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275B4AEA-9560-4108-A597-C4ACE7BBA054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275B4AEA-9560-4108-A597-C4ACE7BBA054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275B4AEA-9560-4108-A597-C4ACE7BBA054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275B4AEA-9560-4108-A597-C4ACE7BBA054}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

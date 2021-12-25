@@ -10,7 +10,7 @@ namespace Herhaling_Pakjesdienst.Tests
     [SetCulture("en-US")]
     public class PackageTests
     {
-        // NOTE: Unit tests are a lot of code, but lots of it is similar and can easily be copied over
+        // NOTE: Unit tests are a lot of code, but lots of it is very similar and can easily be copied over
 
         // cannot create a base package since its only constructor is protected
         // to get around this I create a TwoDayPackage and cast that to its base class
