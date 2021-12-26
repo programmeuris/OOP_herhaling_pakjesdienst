@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Herhaling_Pakjesdienst.Models;
+using Herhaling_Pakjesdienst.DAL;
 
 namespace Herhaling_Pakjesdienst.WPF
 {
@@ -26,6 +27,8 @@ namespace Herhaling_Pakjesdienst.WPF
         // the ? makes this a nullable type, meaning it can be whatever I said the enum can be (in PackageType.cs) OR null!
         // https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types
         private PackageType? _packageType;
+        private FileOperations _fileOperations;
+        private List<Package> _packages;
 
         // constructor
         // this gets called when the program starts so I use it instead of window loaded event
@@ -43,6 +46,12 @@ namespace Herhaling_Pakjesdienst.WPF
             // needs to be done when the program starts like disabling the update button
             // and loading in the data from the text file
             // could just as easily place all this code in the constructor, but this looks neater
+
+            _packageType = null;
+            _fileOperations = new FileOperations();
+            _packages = _fileOperations.GetPackagesFromCsvFile();
+            cboPackages.ItemsSource = _packages;
+            btnUpdate.IsEnabled = false;
         }
 
         private void UpdateLabel()

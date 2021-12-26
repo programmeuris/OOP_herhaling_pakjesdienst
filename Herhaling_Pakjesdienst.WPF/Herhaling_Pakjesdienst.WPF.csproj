@@ -7,13 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Herhaling_Pakjesdienst.DAL\Herhaling_Pakjesdienst.DAL.csproj" />
     <ProjectReference Include="..\Herhaling_Pakjesdienst.Models\Herhaling_Pakjesdienst.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="pakjesdienst.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
