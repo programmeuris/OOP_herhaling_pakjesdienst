@@ -80,7 +80,7 @@ namespace Herhaling_Pakjesdienst.Tests
                                     $"Verzender: Barry Batspak, Ergens in Maaskantje\n" +
                                     $"Bestemmeling: Rikkert Biemans, zijn Opel Manta\n" +
                                     $"Gewicht: 420.00\n" +
-                                    $"Te Betalen: $28,980.00";
+                                    $"Te Betalen: 420 x 69 + 0 = $28,980.00";
 
             // assert
             Assert.AreEqual(expectedOutput, package.ToString());

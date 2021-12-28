@@ -36,7 +36,7 @@ namespace Herhaling_Pakjesdienst.DAL
             catch (Exception ex)
             {
                 Logger.LogReadError(ex.Message);
-                // once an error occurs, we don't need to execute the rest of this method
+                // once an error occurs here, we don't need to execute the rest of this method
                 return null;
             }
 

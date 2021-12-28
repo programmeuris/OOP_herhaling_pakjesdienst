@@ -96,7 +96,7 @@
                     <Label Content="Soort Zending"
                            DockPanel.Dock="Left"
                            x:Name="lblSoortZending"/>
-                    <TextBox x:Name="txtSoortZending"
+                    <TextBox x:Name="txtVasteKostOfToeslag"
                              DockPanel.Dock="Right"/>
                 </DockPanel>
             </StackPanel>
@@ -105,7 +105,8 @@
         <Button x:Name="btnBereken"
                 Content="Bereken"
                 Grid.Row="2"
-                Grid.Column="0"/>
+                Grid.Column="0"
+                Click="btnBereken_Click"/>
         <Button x:Name="btnUpdate"
                 Content="Update"
                 Grid.Row="2"
@@ -118,6 +119,7 @@
         <ComboBox x:Name="cboPackages"
                   Grid.Row="4"
                   Grid.Column="0"
-                  Grid.ColumnSpan="2"/>
+                  Grid.ColumnSpan="2"
+                  SelectionChanged="cboPackages_SelectionChanged"/>
     </Grid>
 </Window>

@@ -65,7 +65,7 @@ namespace Herhaling_Pakjesdienst.Models
                                              $"Verzender: {VerzendNaam}, {VerzendAdres}\n" +
                                              $"Bestemmeling: {BestemmingNaam}, {BestemmingAdres}\n" +
                                              $"Gewicht: {Gewicht:n2}\n" +
-                                             $"Te Betalen: {VerzendingsKosten():c2}";
+                                             $"Te Betalen: {BerekenVerzendingsKosten()}";
 
         //=public=properties=======================================================================
         public string BestemmingAdres
